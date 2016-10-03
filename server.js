@@ -5,8 +5,12 @@ var app = express();
 var result = {};
 app.get("/", function(req, res) {
 	// returns ip address of the client.
-	result.ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress ||
+	result.ipaddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress ||
          req.socket.remoteAddress || req.connection.socket.remoteAddress;
+    // The following three lines extract os information from the parsed request header.
+    var parsedUA = parser.parse(req.headers["user-agent"]);
+    var os = parsedUA.string;
+	result.os = os.slice(os.indexOf("(") + 1, os.indexOf(")"));
     // Send response json.
     res.send(result);
     res.end();
