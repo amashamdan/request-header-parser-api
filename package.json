@@ -1,0 +1,29 @@
+{
+  "name": "request-header-parser-api",
+  "version": "1.0.0",
+  "description": "returns a json with ip address, OS and language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amashamdan/request-header-parser-api.git"
+  },
+  "keywords": [
+    "api",
+    "request",
+    "header",
+    "parser"
+  ],
+  "author": "Amer Hamdan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amashamdan/request-header-parser-api/issues"
+  },
+  "homepage": "https://github.com/amashamdan/request-header-parser-api#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ua-parser": "^0.3.5"
+  }
+}
